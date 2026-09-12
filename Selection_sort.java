@@ -16,7 +16,6 @@ public class Selection_sort {
         int n = arr.length;
 
         for (int i = 0; i < n - 1; i++) {
-            // Find the minimum element in the unsorted part
             int minIndex = i;
             for (int j = i + 1; j < n; j++) {
                 if (arr[j] < arr[minIndex]) {
@@ -24,14 +23,12 @@ public class Selection_sort {
                 }
             }
 
-            // Swap the found minimum element with the first element
             int temp = arr[minIndex];
             arr[minIndex] = arr[i];
             arr[i] = temp;
         }
     }
 
-    // Utility function to print array
     static void printArray(int[] arr) {
         for (int value : arr) {
             System.out.print(value + " ");
